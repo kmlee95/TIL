@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+function Food(props) {
+  //console.log({fav});
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>I like {props.name}</h1> <h2>i data {props.picture}</h2>
     </div>
   );
+}
+const foodILike = [
+  { id: 1, name: "kimchi", data: "hi" },
+  { id: 2, name: "pizza", data: "kiki" },
+];
+
+function renderFood(dish) {
+  return <Food key={dish.id} name={dish.name} picture={dish.data} />;
+}
+
+function App() {
+  return <div>{foodILike.map(renderFood)}</div>;
 }
 
 export default App;

@@ -1,4 +1,4 @@
-#React Hook 강의
+# React Hook 강의 참고
 
 ## 1. 리액트 Higher-order Component(HOC)
 
@@ -16,7 +16,7 @@ depth가 깊어지면 좀 뭐 어때.. 라고 해도 상관 없지만 api도 호
 
 ## 2. 리액트 Hook의 등장
 
-- class없이 state를 사용할 수 있는 새로운 기능
+- class없이 state를 사용할 수 있는 새로운 기능  
   setState는 어디 있나요? componentDidMount는요?  
   네, 이제 없습니다. 대신 state와 React life cycle을 hook 할 수 있는 기능을 제공합니다.
 

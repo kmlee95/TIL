@@ -11,7 +11,7 @@ import Search from "Routes/Search";
 import Header from "Components/Header";
 
 //Composition 은 두개이상의 route를 렌더링하는 방식(동시에)
-//Switch, redirect 개념 잘 파악하기.
+//Switch, redirect 개념 잘 파악하기. (redirect -> 맞는 주소가 없으면 여기로 ..)
 
 export default () => (
   <Router>

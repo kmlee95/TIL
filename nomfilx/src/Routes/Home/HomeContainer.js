@@ -12,6 +12,7 @@ export default class extends React.Component {
   };
 
   async componentDidMount() {
+    this._isMounted = true;
     try {
       const {
         data: { results: nowPlaying },
@@ -39,6 +40,10 @@ export default class extends React.Component {
         loading: false,
       });
     }
+  }
+
+  componentWillUnmount() {
+    this._isMounted = false;
   }
 
   render() {

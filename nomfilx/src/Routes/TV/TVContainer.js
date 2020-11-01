@@ -12,6 +12,7 @@ export default class extends React.Component {
   };
 
   componentDidMount = async () => {
+    this._isMounted = true;
     try {
       const {
         data: { results: topRated },
@@ -38,6 +39,9 @@ export default class extends React.Component {
       });
     }
   };
+  componentWillUnmount() {
+    this._isMounted = false;
+  }
 
   render() {
     const { topRated, popular, airingToday, loading, error } = this.state;

@@ -8,6 +8,8 @@ const api = axios.create({
   },
 });
 
+//encodeURIComponent 사용이유 : 쿼리에서 인코딩이 필요해서
+
 export const moviesApi = {
   nowPlaying: () => api.get("movie/now_playing"),
   upcoming: () => api.get("movie/upcoming"),

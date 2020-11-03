@@ -6,23 +6,29 @@ export default class extends React.Component {
   state = {
     movieResults: null,
     tvResults: null,
-    searchTerm: "code",
+    searchTerm: "",
     loading: false,
     error: null,
   };
 
-  componentDidMount() {
-    this.handleSubmit();
-  }
-
   //handleSubmit => text 입력 후 엔터 클릭시 submit
-  handleSubmit = () => {
+  handleSubmit = (event) => {
+    event.preventDefault();
     const { searchTerm } = this.state;
     if (searchTerm !== "") {
       this.searchByTerm();
     }
   };
 
+  updateTerm = (event) => {
+    const {
+      target: { value },
+    } = event;
+
+    this.setState({
+      searchTerm: value,
+    });
+  };
   searchByTerm = async () => {
     const { searchTerm } = this.state;
     this.setState({ loading: true });
@@ -55,6 +61,7 @@ export default class extends React.Component {
         loading={loading}
         error={error}
         handleSubmit={this.handleSubmit}
+        updateTerm={this.updateTerm}
       />
     );
   }

@@ -7,7 +7,7 @@ import Message from "Components/Message";
 import Poster from "Components/Poster";
 
 const Container = styled.div`
-  padding: 0px 20px;
+  padding: 20px;
 `;
 
 //Section.js 에있는 children은 태그와 태그 사이에 있는 값을 받는다.

@@ -13,6 +13,7 @@ export const content = [
     section: "I'm content section 2",
   },
 ];
+
 const useTabs = (initialTab, allTabs) => {
   if (!allTabs || !Array.isArray(allTabs)) return;
   const [currentIndex, setCurrentIndex] = useState(initialTab);

@@ -12,6 +12,7 @@ const Container = styled.div`
 `;
 
 //Section.js 에있는 children은 태그와 태그 사이에 있는 값을 받는다.
+//<> , </> flagment는 별도의 노드를 추가하지 않고 여러 자식을 그룹화
 const HomePresenter = ({ nowPlaying, upcoming, popular, error, loading }) => (
   <>
     <Helmet>

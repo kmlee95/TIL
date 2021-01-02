@@ -26,7 +26,7 @@ class App extends Component<{}, IState>{
   }
   
   onChange = (event: React.SyntheticEvent<HTMLInputElement>) =>{
-    console.log(event);
+    //console.log(event);
   }
   
   onFormSubmit = (event:React.FormEvent) =>{

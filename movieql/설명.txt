@@ -1,0 +1,43 @@
+1. over-fetching
+/user/ GET
+내가 요청한 영역의 정보보다, 많은 정보를 서버에서 받는것.
+
+
+under-fetching
+필요한 정보에대해 하나를 완성하려고 REST에서 많은 요청을 보내는것(/feed, /user, /user/application)
+
+
+graphql 콴련 쿼리를 백엔드에 날려서 오브젝트를 받아온다.
+
+2. graphql, javascript 차이
+
+- graphql
+query{
+    feed{
+        comments
+        likeNumber
+    }
+    notification{
+        isRead
+    }
+}
+
+- javascript
+{
+    feed : [
+        {
+            comments:1,
+            likeNumber: 20
+        }
+    ],
+    notification: [
+        {
+            isREad: true
+        }
+    ]
+}
+
+
+3. graphql 
+상태 조회 : query,
+데이터 처리 : mutation

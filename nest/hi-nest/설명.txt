@@ -1,0 +1,22 @@
+main.ts에 시작
+
+app.module.ts : 모든것의 루트 모듈
+모듈 : 어플리케이션의 일부분.
+
+controllers : url을 가져오고 함수를 실행
+@Get('/hello')
+seyHello(): string{
+    return 'hello everyone';
+}
+
+
+1. NestJS is a framework or a library? : A framework
+2. What is the difference between a framework and a library? : a framework uses your code, you use the libarary
+3. NestJS can run on top of what? : express or fastify
+4. What is the biggest problem of NodeJS that NestJS is solving? : architecture, nodejs project lack structure
+5. What is the purpose of a decorator(@)? : it's a function that adds functionality to classes or members of the classes
+6. What is the job of the 'AppModule'? : The AppModule is the module that imports all other modules
+7. What is the job of a Controller? : A controller takes a request to a URL and will execute a function
+8. Functions on the controllers and on the services have to have the same name. : false(같게도 가능하지만 다르게도 가능)
+9. What is the job of the service? : a service handles the business logic
+10. Who should access the DB, the controller or the service? : service

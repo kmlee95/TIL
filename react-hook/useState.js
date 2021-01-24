@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
 
-import "./styles.css";
+import './styles.css';
 
 //useState 사용예
 const App = () => {
@@ -26,7 +26,7 @@ const App = () => {
 //일반 state 사용 예
 class AppUgly extends React.Component {
   state = {
-    item: 1
+    item: 1,
   };
   render() {
     const { item } = this.state;
@@ -34,7 +34,7 @@ class AppUgly extends React.Component {
       //this.setState({ item: this.state.item + 1 });
       this.setState((state) => {
         return {
-          item: state.item + 1
+          item: state.item + 1,
         };
       });
     };
@@ -48,5 +48,5 @@ class AppUgly extends React.Component {
   }
 }
 
-const rootElement = document.getElementById("root");
+const rootElement = document.getElementById('root');
 ReactDOM.render(<AppUgly />, rootElement);

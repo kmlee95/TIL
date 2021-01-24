@@ -55,7 +55,7 @@ const Movies = styled.div`
 `;
 
 export const Home = () => {
-  const { loading, error, data } = useQuery(GET_MOVIES);
+  const { loading, data } = useQuery(GET_MOVIES);
   return (
     <Container>
       <Header>
